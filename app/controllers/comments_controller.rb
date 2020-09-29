@@ -13,7 +13,7 @@ class CommentsController < ApplicationController
 
   private
     def set_question
-      @question = Question.find(params[:question_id])
+      @question = Question.find(params[:id])
     end
     def comments_params
       params.required(:comment).permit(:content)
